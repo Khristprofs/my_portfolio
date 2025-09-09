@@ -112,7 +112,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="flex gap-1">
-                  <kbd className="px-2 py-1 bg-muted border rounded text-[10px] font-mono">⌘</kbd>
+                  <kbd className="px-2 py-1 bg-muted border rounded text-[10px] font-mono">⌘/Ctrl</kbd>
                   <kbd className="px-2 py-1 bg-muted border rounded text-[10px] font-mono">K</kbd>
                 </div>
                 <span>Search</span>
