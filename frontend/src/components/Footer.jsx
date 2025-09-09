@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Phone, Copyright, ExternalLink, Heart } from "lucide-react";
 import { Button } from "../components/ui/button1";
 import { socialLinks } from "../data/social";
+import Resume from "../assets/img/resume.pdf"
 
 export default function Footer() {
   const getIconComponent = (iconName) => {
@@ -69,7 +70,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/resume.pdf"
+                  href={Resume}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
