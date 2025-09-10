@@ -16,9 +16,9 @@ import {
   Linkedin,
   Phone,
 } from "lucide-react";
-import { Button } from "../ui/button";
-import { cn } from "../../lib/utils"; // Use relative import
-import { socialLinks } from "../../data/social"; // Use relative import
+import { Button } from "../ui/button1";
+import { cn } from "../../lib/utils";
+import { socialLinks } from "../../data/social";
 
 const navItems = [
   { title: "Home", href: "/" },
