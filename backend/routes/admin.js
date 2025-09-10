@@ -26,6 +26,31 @@ router.get("/messages", async (req, res) => {
               color: #e5e7eb;
             }
 
+            /* Notification Bar */
+            .notification {
+              position: fixed;
+              top: -60px;
+              left: 50%;
+              transform: translateX(-50%);
+              background: #2563eb;
+              color: white;
+              padding: 12px 20px;
+              border-radius: 6px;
+              box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+              font-size: 0.95rem;
+              transition: top 0.4s ease-in-out;
+              z-index: 1000;
+            }
+            .notification.show {
+              top: 20px;
+            }
+            .notification.error {
+              background: #dc2626;
+            }
+            .notification.success {
+              background: #16a34a;
+            }
+
             /* Control Panel Styling */
             .controls {
               max-width: 1000px;
@@ -184,7 +209,7 @@ router.get("/messages", async (req, res) => {
               }
               tr {
                 margin-bottom: 16px;
-                background: white; /* ✅ white card */
+                background: white;
                 border-radius: 10px;
                 padding: 12px;
                 box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -196,12 +221,12 @@ router.get("/messages", async (req, res) => {
                 display: flex;
                 justify-content: space-between;
                 gap: 12px;
-                color: #111827; /* ✅ text gray-900 */
+                color: #111827;
               }
               td::before {
                 content: attr(data-label);
                 font-weight: 600;
-                color: #374151; /* gray-700 */
+                color: #374151;
               }
               .actions {
                 justify-content: flex-end;
@@ -212,6 +237,9 @@ router.get("/messages", async (req, res) => {
         </head>
         <body>
           <h1>Contact Messages</h1>
+
+          <!-- Notification -->
+          <div id="notification" class="notification"></div>
           
           <!-- Control Panel -->
           <div class="controls">
@@ -327,13 +355,22 @@ router.get("/messages", async (req, res) => {
               paginate();
             }
 
+            function showNotification(message, type = "success") {
+              const notification = document.getElementById("notification");
+              notification.textContent = message;
+              notification.className = "notification show " + type;
+              setTimeout(() => {
+                notification.className = "notification " + type;
+              }, 3000);
+            }
+
             async function deleteMessage(id) {
-              if (!confirm("Are you sure you want to delete this message?")) return;
-              const res = await fetch('/api/contact/messages/' + id, { method: 'DELETE' });
+              const res = await fetch('/admin/messages/' + id, { method: 'DELETE' });
               if (res.ok) {
-                location.reload();
+                showNotification("Message deleted successfully", "success");
+                setTimeout(() => location.reload(), 1200);
               } else {
-                alert("Failed to delete message");
+                showNotification("Failed to delete message", "error");
               }
             }
 
