@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../components/home/Hero";
+import Hero from "../components/home/hero";
 import FeaturedProjects from "../components/home/featuredProject";
 import SkillsShowcase from "../components/home/technicalSkills";
 import Achievements from "../components/home/achievements";
