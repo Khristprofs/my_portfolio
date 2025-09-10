@@ -14,7 +14,7 @@ import {
 import { MdEmail, MdOutlineDriveFolderUpload } from 'react-icons/md';
 import { GrNotes } from 'react-icons/gr';
 import Postbird from '../../assets/icons/postbird.png';
-import MongoDB from '../../assets/icons/mongoDB.png';
+import MongoDB from '../../assets/icons/MongoDB.png';
 import Drawio from '../../assets/icons/drawio.png';
 import VSCode from '../../assets/icons/vscode.png';
 import Postman from '../../assets/icons/postman.png';
