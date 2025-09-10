@@ -1,6 +1,6 @@
 import LedgrioImg from "../assets/projects/ledgrio.png";
 import ComclicImg from "../assets/projects/comclic.png"
-import SnakeGame from "../assets/projects/SnakeGame.png"
+import SnakeGame from "../assets/projects/snakeGame.png"
 import Listacc from "../assets/projects/listacc.png"
 import Memberspace from "../assets/projects/memberspace.png"
 
