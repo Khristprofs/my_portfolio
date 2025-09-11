@@ -15,7 +15,7 @@ export function ProjectDetails() {
 
   if (!project) {
     return (
-      <div className="container px-4 md:px-6 mx-auto">
+      <div className="container px-4 md:px-6 mx-auto mt-30">
         <p className="text-red-500">Project not found</p>
         <Button variant="ghost" className="mt-4" onClick={() => navigate(-1)}>
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -26,7 +26,7 @@ export function ProjectDetails() {
   }
 
   return (
-    <div className="container px-4 md:px-6 mx-auto">
+    <div className="container px-4 md:px-6 mx-auto mt-30">
       <Button variant="ghost" className="mb-6" onClick={() => navigate(-1)}>
         <ArrowLeft className="mr-2 h-4 w-4" />
         Back to Projects

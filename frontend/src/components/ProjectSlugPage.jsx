@@ -38,7 +38,7 @@ export default function ProjectPage() {
   }
 
   return (
-    <section className="py-12 md:py-24 mt-16">
+    <section className="py-12 md:py-24">
       <div className="container px-4 md:px-6">
         <Button variant="ghost" className="mb-6" onClick={() => router.back()}>
           <ArrowLeft className="mr-2 h-4 w-4" />
